@@ -129,7 +129,7 @@ export default {
 
                try {
                   await supabase.auth.resetPasswordForEmail(this.email, {
-                     redirectTo: 'http://localhost:3000/resetpassword01',
+                     redirectTo: 'https://antnotify.vercel.app/resetpassword01',
                   })
                   this.successMessage = 'A password reset email has been sent to your inbox.'
                   this.loading = false
