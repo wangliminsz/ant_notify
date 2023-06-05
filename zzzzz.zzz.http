@@ -1,0 +1,87 @@
+### List all records
+
+GET https://api.airtable.com/v0/appoblgGwVGW6XWbQ/thai_notify
+Authorization: Bearer {{air_token}}
+
+###
+
+GET https://api.airtable.com/v0/appoblgGwVGW6XWbQ/thai_notify?filterByFormula={user_id}='6e3f0019-4fcf-4505-ae53-d9a646e1c3e3'
+Authorization: Bearer {{air_token}}
+
+# {
+#   "records": []
+# }  
+
+### Creat a new record
+
+POST https://api.airtable.com/v0/appoblgGwVGW6XWbQ/thai_notify
+Content-Type: application/json
+Authorization: Bearer {{air_token}}
+
+{
+  "records": [
+    {
+      "fields": {
+        "remind_day": 10,
+        "rent_start": "2023-06-04",
+        "rent_end": "2023-06-30",
+        "notify_token": "4bF1CsGaUoN7bjn2YPdYMI4TKFxoTW37l2ZeMVgDQXV",
+        "user_id": "6e3f0019-4fcf-4505-ae53-d9a646e1c3e3"
+      }
+    }
+  ]
+}
+
+### List a record  ---------------------------------------
+
+GET https://api.airtable.com/v0/appoblgGwVGW6XWbQ/thai_notify?id=5
+Authorization: Bearer {{air_token}}
+
+###
+GET https://api.airtable.com/v0/appoblgGwVGW6XWbQ/thai_notify?filterByFormula={id}=16
+Authorization: Bearer {{air_token}}
+
+###
+
+### 
+GET https://api.airtable.com/v0/appoblgGwVGW6XWbQ/thai_notify?id=16
+Authorization: Bearer {{air_token}}
+### Update a record  ---------------------------------------
+
+# const recordId = 5; // assuming the ID is 5 in your Airtable base
+# const airtableId = recordId.toString(); // convert the ID to a string for use in the API request
+
+PATCH https://api.airtable.com/v0/appoblgGwVGW6XWbQ/thai_notify
+Content-Type: application/json
+Authorization: Bearer {{air_token}}
+
+{
+  "records": [
+    {
+      "id": "rec6nxLabZkdl9fXx",
+      "fields": {
+        "remind_day": 20,
+        "rent_start": "2023-06-04",
+        "rent_end": "2023-06-30",
+        "notify_token": "4bF1CsGaUoN7bjn2YPdYMI4TKFxoTW37l2ZeMVgDQXV",
+        "user_id": "6e3f0019-4fcf-4505-ae53-d9a646e1c3e3"
+      }
+    }
+  ]
+}
+
+### Update a record  ---------------------------------------
+
+### delete a record
+
+DELETE https://api.airtable.com/v0/appoblgGwVGW6XWbQ/thai_notify?records%5B%5D=rec6nxLabZkdl9fXx
+Authorization: Bearer {{air_token}}
+Content-Type: application/json
+
+###
+
+DELETE https://api.airtable.com/v0/appoblgGwVGW6XWbQ/thai_notify?id=recWWTKycuI7pRydK&user_id=6e3f0019-4fcf-4505-ae53-d9a646e1c3e3 422
+
+DELETE https://api.airtable.com/v0/appoblgGwVGW6XWbQ/thai_notify?id=18&user_id=eq.6e3f0019-4fcf-4505-ae53-d9a646e1c3e3
+
+@air_token = patqeUrC7eLbBBjx5.3fa0ab9407f2512416c9ae44562fa2a83c5c4231022022c745b418e940e79667

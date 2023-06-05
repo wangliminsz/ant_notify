@@ -1,0 +1,299 @@
+###
+
+POST https://phgwjhhylafzchotgoay.supabase.co/rest/v1/thai_notify
+apikey: {{supa_key}}
+Authorization: Bearer {{supa_key}}
+
+{
+  "name": "117 zzz.http",
+  "created_at": "2023-06-03T08:55:54.787Z",
+  "user_id": "6e3f0019-4fcf-4505-ae53-d9a646e1c3e3",
+  "groupId": 3
+}
+
+
+###
+https://phgwjhhylafzchotgoay.supabase.co/rest/v1/auth/users
+apikey: {{supa_key}}
+Authorization: Bearer {{supa_key}}
+
+### List a Group ---------------------------------------
+
+GET https://phgwjhhylafzchotgoay.supabase.co/rest/v1/groups?id=eq.1
+apikey: {{supa_key}}
+Authorization: Bearer {{supa_key}}
+
+
+###
+
+GET http://localhost:9000/groups/1
+
+### List a Group ---------------------------------------
+
+### List all Groups ---------------------------------------------------
+GET https://phgwjhhylafzchotgoay.supabase.co/rest/v1/groups?select=*
+apikey: {{supa_key}}
+Authorization: Bearer {{supa_key}}
+
+###
+GET http://localhost:9000/groups
+
+### List all Groups ---------------------------------------------------
+
+### Update Delete Contact-------------------------------------------------------------------
+
+Delete https://phgwjhhylafzchotgoay.supabase.co/rest/v1/contacts?id=eq.2
+apikey: {{supa_key}}
+Authorization: Bearer {{supa_key}}
+
+###
+PATCH https://phgwjhhylafzchotgoay.supabase.co/rest/v1/contacts?id=eq.2
+apikey: {{supa_key}}
+Authorization: Bearer {{supa_key}}
+Content-Type: application/json
+
+{
+"name": "Firebase",
+"company": "Google",
+"email": "wang@gmail.com",
+"title": "Firebase",
+"mobile": "97959195",
+"photo": "https://cdn-icons-png.flaticon.com/512/219/219983.png",
+"groupId": "3"
+}
+
+###
+
+put http://localhost:9000/contacts/qtFQnEA
+Content-type: application/json
+
+{
+"name": "Firebase",
+"company": "Google",
+"email": "wang@gmail.com",
+"title": "Firebase",
+"mobile": "97959195",
+"photo": "https://cdn-icons-png.flaticon.com/512/219/219983.png",
+"groupId": "3"
+}
+
+### Update Delete Contact-------------------------------------------------------------------
+
+
+### Create a Group --------------------------------------------
+
+POST https://phgwjhhylafzchotgoay.supabase.co/rest/v1/groups
+apikey: {{supa_key}}
+Authorization: Bearer {{supa_key}}
+Content-type: application/json
+
+[
+{
+"name": "Family"
+}
+]
+
+### Create a Group --------------------------------------------
+
+
+### List All Contacts by user-------------------------------------------------------------------
+
+GET https://phgwjhhylafzchotgoay.supabase.co/rest/v1/contacts?user_id=eq.fe974050-059c-463d-88cb-cc55e401b2a3
+apikey: {{supa_key}}
+Authorization: Bearer {{supa_key}}
+
+###
+### List All Contacts-------------------------------------------------------------------
+
+GET https://phgwjhhylafzchotgoay.supabase.co/rest/v1/contacts?select=*
+apikey: {{supa_key}}
+Authorization: Bearer {{supa_key}}
+
+###
+GET http://localhost:9000/contacts
+###
+
+### List Contact-------------------------------------------------------------------
+
+GET https://phgwjhhylafzchotgoay.supabase.co/rest/v1/contacts?id=eq.1
+apikey: {{supa_key}}
+Authorization: Bearer {{supa_key}}
+
+###
+
+###
+GET http://localhost:9000/contacts/qtFQnEA
+
+### List Contact-------------------------------------------------------------------
+
+### Insert Contact-------------------------------------------------------------------
+
+Post http://localhost:9000/contacts
+Content-type: application/json
+
+{
+"name": "Supabase",
+"company": "Insurance",
+"email": "supa@gmail.com",
+"title": "Business",
+"mobile": "97959195",
+"photo": "https://cdn-icons-png.flaticon.com/512/219/219983.png",
+"groupId": "3"
+}
+
+### Insert Contact-------------------------------------------------------------------
+
+POST https://phgwjhhylafzchotgoay.supabase.co/rest/v1/contacts
+apikey: {{supa_key}}
+Authorization: Bearer {{supa_key}}
+Content-type: application/json
+
+[
+{
+"name": "Contact2",
+"company": "Insurance2",
+"email": "supa222@gmail.com",
+"title": "Business22",
+"mobile": "97929192",
+"photo": "https://cdn-icons-png.flaticon.com/512/219/219983.png",
+"groupId": "2"
+}
+]
+
+
+###
+POST https://phgwjhhylafzchotgoay.supabase.co/rest/v1/contacts
+apikey: {{supa_key}}
+Authorization: Bearer {{supa_key}}
+Content-type: application/json
+
+[
+{
+"name": "Supabase",
+"company": "Insurance",
+"email": "supa@gmail.com",
+"title": "Business",
+"mobile": "97959195",
+"photo": "https://cdn-icons-png.flaticon.com/512/219/219983.png",
+"groupId": "3"
+}
+]
+
+###
+
+PATCH https://phgwjhhylafzchotgoay.supabase.co/rest/v1/items?id=eq.3
+###
+PATCH https://phgwjhhylafzchotgoay.supabase.co/rest/v1/contacts?id=eq.1
+apikey: {{supa_key}}
+Authorization: Bearer {{supa_key}}
+Content-Type: application/json
+
+{
+    "groupId": 2
+}
+
+###
+Prefer: return=minimal
+
+
+
+
+
+###
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+GET http://localhost:9000/contacts
+###
+GET http://localhost:9000/contacts/xg-VfG_
+###
+GET http://localhost:9000/groups
+###
+
+Post http://localhost:9000/contacts
+Content-type: application/json
+
+{
+"name": "Wang Limin",
+"company": "Insurance",
+"email": "wang@gmail.com",
+"title": "Business",
+"mobile": "97959195",
+"photo": "https://encrypted-tbno.gstatic.com/images?q=tbn:ANd9GcT0g8R5VmgqDqpRCwQfw2Y9V-DM-iXS59R9hQ&usqp=CAU",
+"groupId": "3"
+}
+
+###
+{
+  "name": "Wang Limin",
+  "company": "Insurance",
+  "email": "wang@gmail.com",
+  "title": "Business",
+  "mobile": "97959195",
+  "photo": "https://encrypted-tbno.gstatic.com/images?q=tbn:ANd9GcT0g8R5VmgqDqpRCwQfw2Y9V-DM-iXS59R9hQ&usqp=CAU",
+  "groupId": "3"
+}
+###
+
+GET http://localhost:9000/groups
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@supa_jwt = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNjg1NzEyNjA1LCJzdWIiOiI1MTYyMjI4Zi00NzY5LTQ0ZDQtODg0OC03ZGM0NzlmM2M3OTUiLCJlbWFpbCI6ImphY2ttYXRhbWFAb3V0bG9vay5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7fSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJvdHAiLCJ0aW1lc3RhbXAiOjE2ODUxMDc4MDV9XSwic2Vzc2lvbl9pZCI6ImZjNWI1NTI3LTc0ZDYtNDk4OC1iMzg5LTU3ZmMyZjQzMTcyZCJ9._ep6l1qNv644RYddpHdNgKdMDhoyNxzupPsTZ_pw8iQ
+
+@supa_key = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBoZ3dqaGh5bGFmemNob3Rnb2F5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODUwNzAxMjksImV4cCI6MjAwMDY0NjEyOX0.2lOoBm8ElUM87ACf4zXZTfwoBJdqc84VPdtABvhx4Nc

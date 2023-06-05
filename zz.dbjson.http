@@ -1,0 +1,117 @@
+###
+GET http://localhost:9000/contacts
+###
+GET http://localhost:9000/contacts/xg-VfG_
+###
+GET http://localhost:9000/groups
+###
+
+Post http://localhost:9000/contacts
+Content-type: application/json
+
+{
+"name": "Wang Limin",
+"company": "Insurance",
+"email": "wang@gmail.com",
+"title": "Business",
+"mobile": "97959195",
+"photo": "https://cdn-icons-png.flaticon.com/512/219/219983.png",
+"groupId": "3"
+}
+
+###
+
+GET http://localhost:9000/groups
+
+###
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@supa_jwt = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNjg1NzEyNjA1LCJzdWIiOiI1MTYyMjI4Zi00NzY5LTQ0ZDQtODg0OC03ZGM0NzlmM2M3OTUiLCJlbWFpbCI6ImphY2ttYXRhbWFAb3V0bG9vay5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7fSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJvdHAiLCJ0aW1lc3RhbXAiOjE2ODUxMDc4MDV9XSwic2Vzc2lvbl9pZCI6ImZjNWI1NTI3LTc0ZDYtNDk4OC1iMzg5LTU3ZmMyZjQzMTcyZCJ9._ep6l1qNv644RYddpHdNgKdMDhoyNxzupPsTZ_pw8iQ
+
+@supa_key = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBoZ3dqaGh5bGFmemNob3Rnb2F5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODUwNzAxMjksImV4cCI6MjAwMDY0NjEyOX0.2lOoBm8ElUM87ACf4zXZTfwoBJdqc84VPdtABvhx4Nc
+
+
+
+
+###
+GET https://phgwjhhylafzchotgoay.supabase.co/rest/v1/items?select=*
+apikey: {{supa_key}}
+Authorization: Bearer {{supa_key}}
+
+###
+
+GET https://phgwjhhylafzchotgoay.supabase.co/rest/v1/items?select=id,name
+apikey: {{supa_key}}
+Authorization: Bearer {{supa_key}}
+
+###
+
+POST https://phgwjhhylafzchotgoay.supabase.co/rest/v1/items
+apikey: {{supa_key}}
+Authorization: Bearer {{supa_jwt}}
+Content-type: application/json
+
+[
+  {"name": "Daisy1"},
+  {"name": "Wayne1"}
+]
+
+###
+
+###
+
+
+###
+
+
+
+###
+
+
+###
+
+
+###
+
+
+###
