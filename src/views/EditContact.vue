@@ -128,7 +128,7 @@ export default {
             contact: {
                 name: '',
                 // created_at: '',
-                remind_day: '',
+                // remind_day: '',
                 rent_start: '',
                 rent_end: '',
                 notify_token: '',
@@ -262,16 +262,17 @@ export default {
                     let response = await ContactService.airUpdateRecord(this.contact, this.contactId)
 
                     console.log('from edit page ---->', this.contact)
-                    console.log('gpt from edit page response ---->',response)
+                    console.log('from edit page ---->', this.contact)
+                    console.log('gpt from edit page response ---->', response)
 
                     if (response) {
                         this.loading = false
-                    console.log('ok---------> Updated')
-                    // this.$router.push('/')
-                    const currentRoute = this.$router.currentRoute;
-                    if (currentRoute.path !== "/") {
-                        this.$router.push("/"); // Navigate to the page
-                    }
+                        console.log('ok---------> Updated')
+                        // this.$router.push('/')
+                        const currentRoute = this.$router.currentRoute;
+                        if (currentRoute.path !== "/") {
+                            this.$router.push("/"); // Navigate to the page
+                        }
                     } else {
                         this.loading = false
                         // this.$router.push(`/contacts/edit/${this.contactId}`)
