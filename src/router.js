@@ -97,7 +97,7 @@ async function currentUser(next) {
         localUser = await supabase.auth.getSession();
         if (localUser.data.session) {
             // console.log(localUser)
-            console.log('it is OK?')
+            console.log('router-signin-OK')
             // // it'ok
             next();
         } else {

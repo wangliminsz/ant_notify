@@ -45,7 +45,7 @@
                   <!-- <a href="#" v-on:click="createAccount" :disabled="!isFormValid">Sign Up</a> -->
                   <router-link to="/signup">Sign Up</router-link>
                   <!-- <a href="#">Forgot Password?</a> -->
-                  <router-link to="/resetpassword">Forgot Password?</router-link>
+                  <router-link to="/resetpassword">Reset Password</router-link>
                </span>
                <br />
                <input type="submit" class="btn_green" value="Login" :disabled="!isFormValid">

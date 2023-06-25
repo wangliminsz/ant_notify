@@ -115,9 +115,13 @@ export default {
                // console.log(usersResponse.data)
                currentUsers = usersResponse.data
                for (let i = 0; i < currentUsers.length; i++) {
+                  console.log('this.email----------------------------->')
                   console.log(currentUsers[i].email);
+                  console.log(this.email)
+                  console.log('this.email----------------------------->')
                   if (this.email.toLowerCase() === currentUsers[i].email.toLowerCase()) {
                      ifUserExist = true;
+                     break;
                   } else {
                      ifUserExist = false;
                   }
