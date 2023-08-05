@@ -103,7 +103,8 @@
                                     <button class="btn btn-danger my-1 me-2" @click="myDelete(contact.fields.id)">
                                         <i class="fa fa-trash"></i>
                                     </button>
-                                    <span v-if="contact.fields.memo"> M </span>
+                                    <span v-if="contact.fields.memo">M</span>
+                                    <span v-if="contact.fields.pay_period === 'Quarterly'">Q</span>
                                 </div>
                             </div>
                         </div>

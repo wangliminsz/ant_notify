@@ -64,6 +64,12 @@
                             <span class="fw-bold" v-if="contact && contact.fields && contact.fields.rent_end">{{
                                 contact.fields.rent_end }}</span>
                         </li>
+
+                        <li class="list-group-item">Payment Term:
+                            <span class="fw-bold" v-if="contact && contact.fields && contact.fields.pay_period">{{
+                                contact.fields.pay_period }}</span>
+                        </li>
+
                         <li class="list-group-item">Notify Token:
                             <span class="fw-bold" v-if="contact && contact.fields && contact.fields.notify_token">{{
                                 truncatedToken }}</span>
