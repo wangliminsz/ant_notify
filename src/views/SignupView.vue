@@ -142,6 +142,7 @@ export default {
                   console.log(currentUsers[i].email);
                   if (this.email.toLowerCase() === currentUsers[i].email.toLowerCase()) {
                      ifUserExist = true;
+                     break;
                   } else {
                      ifUserExist = false;
                   }
