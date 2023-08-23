@@ -212,8 +212,8 @@ export default {
         if (response) {
           // this.contact = response.data[0]
           this.contact = response.data.records[0];
-          console.log("edit ---->", this.contact);
-          console.log("edit pay_period ---->", this.contact.pay_period);
+          // console.log("edit ---->", this.contact);
+          // console.log("edit pay_period ---->", this.contact.pay_period);
           // let groupsResponse = await ContactService.getAllGroups()
           // if (groupsResponse) {
           //     this.groups = groupsResponse.data
@@ -223,7 +223,7 @@ export default {
         }
       } catch (error) {
         this.errorMessage = error;
-        console.log("error");
+        // console.log("error");
         this.loading = false;
       }
     }
@@ -326,13 +326,13 @@ export default {
             this.contactId
           );
 
-          console.log("from edit page ---->", this.contact);
-          console.log("from edit page ---->", this.contact);
-          console.log("gpt from edit page response ---->", response);
+          // console.log("from edit page ---->", this.contact);
+          // console.log("from edit page ---->", this.contact);
+          // console.log("gpt from edit page response ---->", response);
 
           if (response) {
             this.loading = false;
-            console.log("ok---------> Updated");
+            // console.log("ok---------> Updated");
             // this.$router.push('/')
             const currentRoute = this.$router.currentRoute;
             if (currentRoute.path !== "/") {
@@ -348,7 +348,7 @@ export default {
           }
         } catch (error) {
           this.errorMessage = error;
-          console.log(this.errorMessage);
+          // console.log(this.errorMessage);
           this.loading = false;
         }
       }

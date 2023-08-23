@@ -187,14 +187,14 @@ export default {
   },
 
   created: async function () {
-    console.log("created --- group removed");
+    // console.log("created --- group removed");
     // try {
     //     let response = await ContactService.getAllGroups()
     //     this.groups = response.data
     //     // console.log('------------->', this.groups)
     // }
     // catch (error) {
-    //     console.log('error')
+    //     console.log(error)
     // }
   },
 
@@ -286,7 +286,7 @@ export default {
           let response = await ContactService.airInsertRecord(this.contact);
           // console.log('at the page--------> condo data', this.contact)
 
-          console.log("GPT air add response------------>", response);
+          // console.log("GPT air add response------------>", response);
 
           // const currentRoute = this.$router.currentRoute;
           // if (currentRoute.path !== "/") {
@@ -294,7 +294,7 @@ export default {
           // }
 
           if (response) {
-            console.log("ok---------> Created");
+            // console.log("ok---------> Created");
             this.loading = false;
             // this.$router.push('/')
             const currentRoute = this.$router.currentRoute;
@@ -311,7 +311,7 @@ export default {
           }
         } catch (error) {
           this.errorMessage = error;
-          console.log(this.errorMessage);
+          // console.log(this.errorMessage);
           this.loading = false;
         }
       }

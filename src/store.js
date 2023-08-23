@@ -33,11 +33,11 @@ export default new Vuex.Store({
       })
       if (error) {
         console.log(error)
-        console.log('login 20230602 --- error',error.message)
+        // console.log('login 20230602 --- error',error.message)
         alert('Email or password not correct')
       }
       else {
-        // console.log(data)
+        console.log(data)
         // console.log('from Action----->')
         commit('setLocalLogin', data.session.user.email)
         // localUser.data.session.user.email
@@ -80,10 +80,10 @@ export default new Vuex.Store({
       //   commit('clearLocalLogin')
       // }
       if (error) {
-        console.log('error------------->')
+        // console.log('error------------->')
         console.log(error)
       } else {
-        console.log('NO error------------->')
+        // console.log('NO error------------->')
         // console.log(data.session)
         // console.log(localUser)
         if (data.session) {

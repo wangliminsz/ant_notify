@@ -118,12 +118,12 @@ export default {
             })
             if (error) {
                 console.log(error)
-                console.log('reset 20230602 --- error', error.message)
+                // console.log('reset 20230602 --- error', error.message)
                 alert('Reset Password NOT successful')
             }
             else {
                 console.log(data)
-                console.log('from Reset----->')
+                // console.log('from Reset----->')
                 alert('Reset Password successful')
                 // router.push('/contacts')
                 const currentRoute = this.$router.currentRoute;
@@ -145,7 +145,7 @@ export default {
                     // console.log(usersResponse.data)
                     currentUsers = usersResponse.data
                     for (let i = 0; i < currentUsers.length; i++) {
-                        console.log(currentUsers[i].email);
+                        // console.log(currentUsers[i].email);
                         if (this.email.toLowerCase() === currentUsers[i].email.toLowerCase()) {
                             ifUserExist = true;
                             break;
@@ -167,7 +167,7 @@ export default {
                         })
                         if (error === null) {
                             console.log(data)
-                            alert('User created. Please activate it by clicking on the link in the email.')
+                            alert('User created. Please check email to Activate.')
                             // if (Array.isArray(data.user.identities) && data.user.identities.length > 0) {
                             //    console.log(data.user.identities[0].identity_data.email);
                             // } else {
@@ -191,7 +191,8 @@ export default {
                 }
             }
             catch (error) {
-                console.log('Error Occurred------->', error)
+                // console.log('Error Occurred------->', error)
+                console.log(error)
             }
 
         },

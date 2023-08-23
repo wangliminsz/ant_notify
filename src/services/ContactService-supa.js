@@ -95,7 +95,7 @@ export class ContactService {
   static updateContact(contact, contactId, userId) {
 
     let dataURL = `${this.serverURL}/contacts?id=eq.${contactId}&user_id=eq.${userId}`;
-    console.log('update----------->>>>>', dataURL)
+    // console.log('update----------->>>>>', dataURL)
     let headers = {
       'apikey': `${this.supa_key}`,
       'Authorization': `Bearer ${this.supa_key}`

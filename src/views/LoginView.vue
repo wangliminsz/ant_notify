@@ -118,7 +118,7 @@ export default {
                // console.log(usersResponse.data)
                currentUsers = usersResponse.data
                for (let i = 0; i < currentUsers.length; i++) {
-                  console.log(currentUsers[i].email);
+                  // console.log(currentUsers[i].email);
                   if (this.email.toLowerCase() === currentUsers[i].email.toLowerCase()) {
                      ifUserExist = true;
                      break;
@@ -126,7 +126,7 @@ export default {
                      ifUserExist = false;
                   }
                }
-               console.log('ifExist-------》', ifUserExist)
+               // console.log('ifExist-------》', ifUserExist)
 
                if (!ifUserExist) {
                   const { data, error } = await supabase.auth.signUp({
@@ -140,7 +140,7 @@ export default {
                   })
                   if (error === null) {
                      console.log(data)
-                     alert('User created. Please activate it by clicking on the link in the email.')
+                     alert('User created. Please check email to Activate.')
                      // if (Array.isArray(data.user.identities) && data.user.identities.length > 0) {
                      //    console.log(data.user.identities[0].identity_data.email);
                      // } else {
@@ -156,7 +156,8 @@ export default {
             }
          }
          catch (error) {
-            console.log('Error Occurred------->', error)
+            // console.log('Error Occurred------->', error)
+            console.log(error)
          }
 
       },

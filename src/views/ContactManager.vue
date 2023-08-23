@@ -222,7 +222,7 @@ export default {
                         this.loading = true
                         let response = await ContactService.deleteCondo(itemId, this.currentUserId)
                         if (response) {
-                            console.log('deleted')
+                            // console.log('deleted')
                             // const airtableId = recordId.toString();
                             let response = await ContactService.getAllCondos(this.currentUserId)
                             this.contacts = response.data.records
@@ -245,10 +245,10 @@ export default {
                     this.loading = true
                     let response = await ContactService.getAllCondos(this.currentUserId)
                     this.contacts = response.data.records
-                    console.log('from search air---->', this.contacts)
+                    // console.log('from search air---->', this.contacts)
 
                     const records = this.contacts.filter(contact => contact.fields.name.toLowerCase().includes(this.searchName.toLowerCase()));
-                    console.log(records);
+                    // console.log(records);
                     this.contacts = records
 
                     this.loading = false
